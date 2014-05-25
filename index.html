@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Touchscreen BETA</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="init.js"></script>
+<script type="text/javascript" src="clock.js"></script>
+<script type="text/javascript" src="buttons.js"></script>
+<script type="text/javascript" src="poster_carousel.js"></script>
+
+
+</head>
+<body >
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/fi_FI/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+
+document.addEventListener("click",handler,true);
+
+function handler(e){
+if(e.target.className=="wrap"){
+e.stopPropagation();
+e.preventDefault();
+}
+};
+
+var overlay = false;
+
+function addOverlay(url) {
+
+	overlay = true;
+	$('body').append('<div id="overlay"><div class="wrap"><div class="left"><div class="wrap"></div></div><div class="mid"><div class="wrap"></div></div><div class="right"><div class="wrap"></div></div></div>');
+
+	$('#overlay > .wrap > .left > .wrap').append('<button class="close" onclick="removeOverlay()">Close</button>');
+	$('#overlay > .wrap > .mid > .wrap').append('<iframe class="overlayIframe" src="'+url+'"></iframe>');
+	
+}
+
+function removeOverlay() {
+	overlay = false;
+	$('#overlay').remove();
+}
+
+function configToolButton()
+{
+addOverlay("hammer/notes.html");
+} 
+
+function lunchButton()
+{
+addOverlay("lunch/index.html");
+}
+
+function clickGameButton()
+{
+addOverlay("clickgame/index.html");
+}
+
+
+</script>
+<div class="frame">
+	<div class="wrap">
+		<div class="left">
+			<div class="wrap">
+				<div class="lefttop">
+					<div class="wrap">
+						<div id="clock" class="clock"></div>
+					</div>
+				</div>
+				<div class="righttop">
+					<div class="wrap">
+						<div id="weather" class="weather">
+							<div id="awcc1393489407331" class="aw-widget-current aw-widget-legal"  data-locationkey="133091" data-unit="c" data-language="en-us" data-useip="false" data-uid="awcc1393489407331"></div><script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>
+						</div>
+					</div>
+				</div>
+				<div class="rightmid">
+				<button class="homeButton" onclick="homeButton()">Home</button>
+				
+				</div>
+				
+				<div class="posters"></div>
+				
+				<div class="posters">
+					<div id="poster_carousel" class="poster_carousel" >
+						<img src="posters/1.jpg" alt="1"/>
+						<img src="posters/2.jpg" alt="2"/>
+						<img src="posters/3.jpg" alt="3"/>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="mid">
+			
+			<button class="roundButton" onclick="lunchButton()">Lunch menu</button><br /><br />
+				<button class="roundButton" onclick="configToolButton()">Config Tool Game</button><br /><br />
+				<button class="roundButton" onclick="clickGameButton()">Click Game</button><br /><br />
+			
+		</div>
+		<div class="right">
+			<div class="wrap" >
+				<div class="fb-like-box" data-href="https://www.facebook.com/opiskelijakuntametka" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="true"></div>
+				<div class="fb-like-box" data-href="https://www.facebook.com/pages/LEPO-ry/167057836679228" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="true"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

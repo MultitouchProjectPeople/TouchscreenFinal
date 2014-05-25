@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+    $.getJSON('http://mob.metropolia.fi/ruoka/ruoka.php?toimipiste=vanhamaantie&ravintola=unicafe&json=1&jsoncallback=?', function(data) {
+        for (var i=0; i < Object.keys(data).length;i++){
+            $('#feed').append('<p>'+data[i]+'</p>');
+        }
+    });
+    </script>
+    <style>
+    #feed
+    {
+        display: inline-block;
+        border: 1px solid black;
+    }
+    #list
+    {
+        
+        border: 1px solid black;
+        
+    </style>
+  </head>
+  <body>
+    <div id="feed"><h1>Todays lunch</h1></div>
+    
+    <div id="list">
+    <ul>
+    <li>vl = low-lactose </li>
+<li>l = lactose-free</li>
+<li>g = gluten-free</li>
+<li>v = includes garlic</li>
+<li>k = vegetarian</li>
+<li>ve = vegan</li>
+<li>se = contains celery</li>
+<li>pä = contains nuts</li>
+<li>m = milk free</li>
+<li>so = contains soya</li>
+<li>[S] = Fulfils Kela’s criteria for student meal programmes</li>
+</ul>
+  </body>
+</html>

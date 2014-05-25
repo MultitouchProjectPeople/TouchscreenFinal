@@ -1,0 +1,39 @@
+
+.wrapper{
+	display: inlineblock;
+	}
+.left_box {
+		border: 1px solid black;
+		box-sizing: border-box;
+		position:absolute;
+		left:0;
+		top:0;
+		right:80%;
+		bottom:0;
+		}
+.right_box {
+		border: 1px solid black;
+		position:absolute;
+		left:80%;
+		top:0;
+		right:0;
+		bottom:0;
+		box-sizing: border-box;
+				}
+.central_navi {
+	border: 1px solid black;
+	position:absolute;
+		left:20%;
+		top:0;
+		right:20%;
+		bottom:0;
+	box-sizing: border-box;
+}
+.clock {
+	border: 1px solid black;
+	box-sizing: border-box;
+		left:0;
+		top:50%;
+		right:;
+		bottom:50%;
+	}

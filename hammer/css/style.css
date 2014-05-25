@@ -1,0 +1,101 @@
+body
+{
+	font-family: Verdana;
+	font-size: 12pt;
+	overflow: hidden;
+}
+
+.info
+{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	height: 49px;
+	border-bottom: 1px solid black;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.info p
+{
+	margin: 4px;
+}
+
+.footer
+{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 19px;
+	border-bottom: 1px solid black;
+	box-sizing: border-box;
+	padding-left: 10px;
+	overflow: hidden;
+}
+.footer p
+{
+	margin: 2px;
+	text-align: center;
+	font-size: 8pt;
+}
+
+.wrap
+{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50px;
+	bottom: 20px;
+	overflow: hidden;
+	background: #e7e7e7;
+}
+
+.item
+{
+	background: #e2e2e2;
+	box-sizing: border-box;
+	border: 1px solid black;
+	position: absolute;
+}
+
+.menu
+{
+	position: absolute;
+	box-sizing: border-box;
+	border: 1px solid black;
+	width: 150px;
+	height: auto;
+	background: #c2c2c2;
+	z-index: 99998;
+}
+
+.menu ul
+{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.menu ul li
+{
+	padding: 0px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 0px;
+	text-align: center;
+	font-size: 8pt;
+	cursor: pointer;
+	border-bottom: 1px solid black;
+}
+
+.menu ul li:last-child
+{
+	border-bottom: none;
+}
+
+#edit, #reset
+{
+	color: #e7e7e7;
+}

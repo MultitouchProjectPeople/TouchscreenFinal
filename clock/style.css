@@ -1,0 +1,121 @@
+#clock
+{
+	width: 100%;
+}
+
+#clock > #face
+{
+	width: 100%;
+	height: 100%;
+	border-radius: 100%;
+	border: 2px solid black;
+	position: relative;
+}
+
+#clock > #digital
+{
+	margin-left: 15%;
+	margin-top: 5%;
+	width: 70%;
+	border: 2px solid black;
+	position: relative;
+}
+
+#clock > #digital
+{
+	font-family: Verdana;
+}
+
+#clock > #digital > #hour, #clock > #digital > #minute, #clock > #digital > #second, #clock > #digital > .colon
+{
+	float: left;
+	display: block;
+	width: 30%;
+	text-align: center;
+}
+
+#clock > #digital > .colon
+{
+	width: 5%;
+}
+
+
+#clock > #face > .hour
+{
+	width: 2%;
+	height: 30%;
+	margin-top: 20%;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	border-radius: 100%;
+	background: black;
+	-webkit-transform-origin: 50% 100%;
+	-webkit-transform:rotate(0deg);
+}
+
+#clock > #face > .minute
+{
+	width: 1.5%;
+	height: 40%;
+	margin-top: 10%;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	border-radius: 100%;
+	background: black;
+	-webkit-transform-origin: 50% 100%;
+	-webkit-transform:rotate(0deg);
+}
+
+#clock > #face > .second
+{
+	width: 1%;
+	height: 44%;
+	margin-top: 6%;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	background: black;
+	border-radius: 100%;
+	-webkit-transform-origin: 50% 100%;
+	-webkit-transform:rotate(0deg);
+}
+
+#clock > #face > .center
+{
+	position: absolute;
+	left: 47.5%;
+	top: 47.5%;
+	width: 5%;
+	height: 5%;
+	background: white;
+	border: 1px solid black;
+	border-radius: 100%;
+}
+
+#clock > #face > .hourIndicator
+{
+	width: 1%;
+	height: 5%;
+	margin-top: 2%;
+	margin-bottom: 43%;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	background: black;
+	-webkit-transform:rotate(0deg);
+}
+
+#clock > #face > .secondIndicator
+{
+	width: 1%;
+	height: 3%;
+	margin-top: 2%;
+	margin-bottom: 44%;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	background: black;
+	-webkit-transform:rotate(0deg);
+}

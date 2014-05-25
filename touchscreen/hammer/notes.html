@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hammertime!</title>
+<link rel="stylesheet" type="text/css" href="css/notes.css">
+<script src="js/jquery.js"></script>
+<script src="js/hammer.min.js"></script>
+<script src="js/jquery.hammer.js"></script>
+<script src="js/hammer.fakemultitouch.js"></script>
+<script src="js/hammer.showtouches.js"></script>
+<script src="js/notes.js"></script>
+<script>Hammer.plugins.fakeMultitouch();</script>
+<!--[if !IE]> -->
+<script>
+    Hammer.plugins.showTouches();
+</script>
+<!-- <![endif]-->
+</head>
+<body>
+<div class="info">
+<p><b>INSTRUCTIONS: 1.</b> Double click the canvas to create a note <b>2.</b> Drag notes using mouse <b>3.</b> Shift + mouse to emulate pinch & rotation <b>4.</b> Create multiple notes, rotate and overlap them to test the application <b>5.</b> Click & hold on top of a note to open the note specific menu <b>5.</b> Use available menu buttons to do actions</p>
+</div>
+<div class="wrap">
+</div>
+<div class="footer">
+<p>Designed for Google Chrome</p>
+</div>
+</body>
+</html>

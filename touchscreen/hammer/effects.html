@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Effects!</title>
+<link rel="stylesheet" type="text/css" href="css/effects.css">
+<script src="js/jquery.js"></script>
+<script src="js/hammer.min.js"></script>
+<script src="js/jquery.hammer.js"></script>
+<script src="js/hammer.fakemultitouch.js"></script>
+<script src="js/hammer.showtouches.js"></script>
+<script src="js/effects.js"></script>
+<script>Hammer.plugins.fakeMultitouch();</script>
+<!--[if !IE]> -->
+<script>
+    Hammer.plugins.showTouches();
+</script>
+<!-- <![endif]-->
+</head>
+<body>
+<div class="canvas">
+</div>
+</body>
+</html>
